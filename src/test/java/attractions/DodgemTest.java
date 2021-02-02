@@ -29,4 +29,14 @@ public class DodgemTest {
     public void hasVisitCount() {
         assertEquals(0, dodgems.getVisitCount());
     }
+
+    @Test
+    public void ticketPriceHalves(){
+        assertEquals(2.25, dodgems.priceFor(dodgems.visitor), 0.1);
+    }
+
+    @Test
+    public void ticketPriceDoesNotHalf(){
+        assertEquals(4.50, dodgems.priceFor(dodgems.visitor2), 0.1);
+    }
 }
